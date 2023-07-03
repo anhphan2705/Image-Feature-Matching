@@ -1,2 +1,2 @@
-# image_stitching_learning
-Learn how to do image stitching
+# image_feature_detection_matching
+Learn how to do image feature detections
