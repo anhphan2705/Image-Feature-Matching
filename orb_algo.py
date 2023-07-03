@@ -13,10 +13,11 @@ image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Initiate ORB detector
 orb = cv2.ORB_create()
-# find the keypoints with ORB
-kp = orb.detect(image_gray,None)
-# compute the descriptors with ORB
-kp, des = orb.compute(image_gray, kp)
+# # find the keypoints with ORB
+# kp = orb.detect(image_gray,None)
+# # compute the descriptors with ORB
+# kp, des = orb.compute(image_gray, kp)
+kp, des = orb.detectAndCompute(image_gray, None) # or do both
 # draw only keypoints location,not size and orientation
 img2 = cv2.drawKeypoints(image_gray, kp, None, color=(0,255,0), flags=0)
 
